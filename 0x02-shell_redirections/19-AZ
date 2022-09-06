@@ -1,2 +1,2 @@
 #!/bin/bash
-tr "A" "Z" | try "c" "e"
+echo ABc | tr Ac Ze
