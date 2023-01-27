@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# trims the stuff before - in a file name
+# A script that displays:
+#  The content of the current directory
+#  In a list format
+#  Where only the part of the name after the first dash is displayed
 
-temp="${PWD}/*"
-
-for i in $temp ; do
-    basename "$i" | cut -d "-" -f2
+for i in *; do
+  if [ -f "$i" ]; then
+    echo "$i" | cut -d '-' -f2
+  fi
 done
