@@ -23,4 +23,3 @@ do
 	trap 'echo "I hate the kill command" && termfunc' SIGTERM
 	trap 'termfunc' SIGQUIT
 done
-
