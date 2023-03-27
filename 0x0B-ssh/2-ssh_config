@@ -1,0 +1,4 @@
+# Configuration for connecting to the server
+Host 52.3.247.122
+    User ubuntu
+    IdentityFile ~/.ssh/school
