@@ -1,24 +1,4 @@
 #!/usr/bin/env bash
-# Check if Nginx is installed and running
-
-if ! command -v nginx &> /dev/null
-then 
-	echo "Nginx is not installed. Installing..."
-	sudo apt-get update
-	sudo apt-get install nginx
-fi
-
-if ! systemctl is-active --quiet nginx
-then
-	echo "Nginx is not running. Starting..."
-	sudo systemctl start nginx
-fi
-
-# Modify Nginx configuration to listen on port 80
-sudo sed -i 's/listen\s*80;/listen 80 default_server;g' /etc/nginx/nginx.conf
-
-# Restart Nginx Service
-sudo systemctl restart nginx
-
-echo "Nginx is now listening on port 80"
-
+# Creating a symbolic link to connect config files
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
