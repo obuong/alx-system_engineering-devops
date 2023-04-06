@@ -1,0 +1,17 @@
+[0;1;31m×[0m apache2.service - The Apache HTTP Server
+     Loaded: loaded (]8;;file://obuong-TECRA-Z40t-B/lib/systemd/system/apache2.service/lib/systemd/system/apache2.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Tue 2023-04-04 17:34:45 EAT; 2min 6s ago
+       Docs: ]8;;https://httpd.apache.org/docs/2.4/https://httpd.apache.org/docs/2.4/]8;;
+    Process: 69778 ExecStart=/usr/sbin/apachectl start [0;1;31m(code=exited, status=1/FAILURE)[0m
+        CPU: 54ms
+
+Apr 04 17:34:44 obuong-TECRA-Z40t-B apachectl[69781]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Apr 04 17:34:44 obuong-TECRA-Z40t-B apachectl[69781]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Apr 04 17:34:44 obuong-TECRA-Z40t-B apachectl[69781]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Apr 04 17:34:44 obuong-TECRA-Z40t-B apachectl[69781]: no listening sockets available, shutting down
+Apr 04 17:34:44 obuong-TECRA-Z40t-B apachectl[69781]: AH00015: Unable to open logs
+Apr 04 17:34:45 obuong-TECRA-Z40t-B apachectl[69778]: Action 'start' failed.
+Apr 04 17:34:45 obuong-TECRA-Z40t-B apachectl[69778]: The Apache error log may have more information.
+Apr 04 17:34:45 obuong-TECRA-Z40t-B systemd[1]: [0;1;39m[0;1;31m[0;1;39mapache2.service: Control process exited, code=exited, status=1/FAILURE[0m
+Apr 04 17:34:45 obuong-TECRA-Z40t-B systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mapache2.service: Failed with result 'exit-code'.[0m
+Apr 04 17:34:45 obuong-TECRA-Z40t-B systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start The Apache HTTP Server.[0m
