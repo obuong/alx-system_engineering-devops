@@ -1,6 +1,10 @@
-# A puppet scripts that fixes incorrect 'phpp' extensions to 'php'
+# A puppet script to replae rewrite a line
 
-exec { 'fix-phpp':
-  command => "sed -i 's/phpp/php/g' /var/www/wp-settings.php",
-  path    => '/bin:/usr/bin'
+$file_path = '/var/www/html/wp-settings.php'
+
+#replace "phpp" with "php"
+
+exec { 'replace_line':
+  command => "sed -i 's/phpp/php/g' ${file_path}",
+  path    => ['/bin','/usr/bin']
 }
